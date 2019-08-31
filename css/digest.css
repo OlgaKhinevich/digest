@@ -1,0 +1,419 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6FCFF;
+  font-family: "Raleway", sans-serif;
+}
+
+body .container {
+  margin: 0 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+
+body .container nav {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+body .container nav .logo {
+  margin: 0;
+  padding: 0;
+}
+
+body .container nav .logo h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  -webkit-background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
+  -webkit-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -ms-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -moz-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -o-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
+  background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  margin-left: 32%;
+}
+
+body .container nav ul > li {
+  margin-right: 55px;
+}
+
+body .container nav ul > li > a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #364241;
+  position: relative;
+}
+
+body .container nav ul > li > a::before {
+  bottom: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #01B2AB;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+body .container nav ul > li > a:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body .container nav .signin {
+  background-color: #36DBBA;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+body .container nav .signup {
+  background-color: #74A5EE;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+}
+
+body .container .firstscreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+}
+
+body .container .firstscreen .text {
+  margin-top: 14%;
+  margin-left: -20px;
+}
+
+body .container .firstscreen .text h1 {
+  font-size: 44px;
+  font-weight: 900;
+  color: #235859;
+  margin: 10px 0 5px 0;
+}
+
+body .container .firstscreen .text h1 .other-color {
+  color: #01B2AB;
+}
+
+body .container .firstscreen .text p {
+  margin: 15px 0 25px 0;
+}
+
+body .container .firstscreen .text button {
+  background-color: #74A5EE;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+  height: 36px;
+  width: 120px;
+}
+
+body .container .firstscreen img {
+  height: 493px;
+  width: 568px;
+  margin: 30px -45px 30px -70px;
+}
+
+body .container #howitworks .heading {
+  width: 350px;
+  height: 80px;
+  margin: 0 30%;
+  background-color: #D1DCE0;
+  border-radius: 10px;
+}
+
+body .container #howitworks .heading h1 {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 40px;
+  color: #235859;
+  font-weight: 900;
+}
+
+body .container #howitworks .heading-text {
+  margin: 40px 0 10px 0;
+  font-size: 20px;
+}
+
+body .container #howitworks .switches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #235859;
+}
+
+body .container #howitworks .switches #button-click1, body .container #howitworks .switches #button-click2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #235859;
+  margin: 20px 60px 10px 0;
+  text-decoration: none;
+  position: relative;
+}
+
+body .container #howitworks .switches #button-click1::before, body .container #howitworks .switches #button-click2::before {
+  bottom: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #01B2AB;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+body .container #howitworks .switches #button-click1:hover:before, body .container #howitworks .switches #button-click2:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body .container #howitworks #textSlide1 {
+  margin: 30px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 50px 40%;
+      grid-template-columns: 40% 50px 40%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "paragraph1 number1 ." ". number2 paragraph2" "paragraph3 number3 .";
+  grid-column-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container #howitworks #textSlide1 .paragraph1, body .container #howitworks #textSlide1 .paragraph2, body .container #howitworks #textSlide1 .paragraph3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #235859;
+}
+
+body .container #howitworks #textSlide1 .paragraph1 p, body .container #howitworks #textSlide1 .paragraph2 p, body .container #howitworks #textSlide1 .paragraph3 p {
+  font-family: "Raleway", sans-serif;
+  color: #364241;
+  font-weight: 400;
+}
+
+body .container #howitworks #textSlide1 .paragraph1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: paragraph1;
+}
+
+body .container #howitworks #textSlide1 .paragraph2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: paragraph2;
+}
+
+body .container #howitworks #textSlide1 .paragraph3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: paragraph3;
+}
+
+body .container #howitworks #textSlide1 .number1, body .container #howitworks #textSlide1 .number2, body .container #howitworks #textSlide1 .number3 {
+  -webkit-background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
+  -webkit-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -ms-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -moz-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -o-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
+  background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+body .container #howitworks #textSlide1 .number1 p, body .container #howitworks #textSlide1 .number2 p, body .container #howitworks #textSlide1 .number3 p {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin: 5px 0;
+}
+
+body .container #howitworks #textSlide1 .number1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: number1;
+}
+
+body .container #howitworks #textSlide1 .number2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: number2;
+}
+
+body .container #howitworks #textSlide1 .number3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: number3;
+}
+
+body .container #howitworks #textSlide2 {
+  display: none;
+}
+
+body .action {
+  background-color: rgba(209, 220, 224, 0.5);
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+body .action h2 {
+  font-size: 45px;
+  color: #235859;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-top: 50px;
+  margin: 0;
+}
+
+body .action .employer {
+  display: none;
+}
+
+body .action button {
+  margin: 30px 0 40px 0;
+  background-color: #74A5EE;
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+  font-family: "Montserrat", sans-serif;
+  height: 36px;
+  width: 120px;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #364241;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body footer ul {
+  padding: 20px 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+}
+
+body footer ul li {
+  margin: 0 20px;
+}
+
+body footer ul li a {
+  text-decoration: none;
+  color: #D1DCE0;
+  font-weight: 700;
+}
+
+body footer .copy h1 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  -webkit-background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
+  -webkit-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -ms-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -moz-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -o-background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
+  background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body footer .copy p {
+  font-size: 10px;
+  color: #D1DCE0;
+}
+/*# sourceMappingURL=digest.css.map */
