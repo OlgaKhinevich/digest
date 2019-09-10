@@ -6,37 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Digital Employment Station</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Raleway:300,400,500,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/digest.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <h1>digest</h1>
-            </div>
-            
-            <ul>
-                <li><a href="#" class="menu-item">Search</a></li>
-                <li><a href="#howitworks" class="menu-item">How It Works</a></li>
-            </ul>
-            <button class="signin">Sign in</button>
-            <button class="signup">Sign up</button>
-        </nav>
-        <div class="firstscreen">
+    <!--Menu-->
+    <header class="header">
+        <div class="navbar">
+                <div class="navbar-wrap">
+                    <div class="logo">
+                        <h1>digest</h1>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#" class="menu-item">Search</a></li>
+                            <li><a href="#howitworks" class="menu-item">How It Works</a></li>
+                        </ul>
+                        <button class="signin">Sign in</button>
+                        <button class="signup">Sign up</button>
+                    </div>
+                    
+                </div>
+        </div> 
+        <!--First screen-->
+        <div class="firstScreen">
+            <div class="firstScreen-wrap">
             <div class="text">
                 <h1><span class="other-color">Dig</span>ital <span class="other-color">E</span>mployment</br> <span class="other-color">St</span>ation</h1>
                 <p>a service that allows freelancers and employers to collaborate and work profitably and easily</p>
                 <button>Get started</button>
             </div>
             <img src="img/Freelance illustration.png">
+            </div>  
         </div>
-        <div id="howitworks">
-            <div class="heading">
-                <h1>How It Works</h1>
-                <div class="animation-1"></div>
-                <div class="animation-2"></div>
-            </div>
+    </header>
+    <!--How It Works Block-->
+    <div id="howitworks">
+        <div class="heading">
+            <h1>How It Works</h1>
+            <div class="animation-1"></div>
+            <div class="animation-2"></div>
+        </div>
             <p class="heading-text">Take just 3 steps to join Digest!</p>
             <div class="switches">
                 <a href="" onclick="return false" id="button-click1">For Freelancers</a>

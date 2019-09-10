@@ -1,185 +1,213 @@
 @import 'variables';
 @import 'mixins';
 
+* {box-sizing: border-box;}
 body {
     margin: 0;
     padding: 0;
     background-color: #F6FCFF;
     font-family: $font-secondary;
-    .container {
-        margin: 0 200px;
-        display: flex;
-        flex-direction: column;
-        font-family: $font-primary;
-        nav {
-            margin-top: 5px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            height: 50px;
-            .logo {
-                margin: 0;
-                padding: 0;
-                    h1 {
-                        @include logo($font-primary, $gradient); 
-                    }  
-            }
-            ul {
+    header {
+        .navbar {
+            margin-top: 10px;
+            min-height: 50px;
+            .navbar-wrap {
+                @include grid;
                 display: flex;
-                flex-direction: row;
-                list-style-type: none;
-                margin-left: 34%;
-                > li {
-                    margin-right: 55px;
-                    > a {
-                        text-decoration: none;
-                        font-weight: 700;
-                        color: $primary-font-color;
+                align-items: center; 
+                justify-content: space-between;
+                font-family: $font-primary;
+                padding: 0 5%;
+                .logo {
+                    padding: 0;
+                    h1 {@include logo($font-primary, $gradient);}  
+                }
+                .menu {
+                    display: flex;
+                    align-items: center;
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        list-style-type: none;
+                        > li {
+                            margin-right: 55px;
+                            > a {
+                                text-decoration: none;
+                                font-weight: 700;
+                                color: $primary-font-color;
+                                position: relative;
+                                @include link-animation;
+                            }
+                        } 
+                    } 
+                    .signin {
+                        @include action-button($button-one-color);
+                        margin-right: 20px;
                         position: relative;
-                        @include link-animation;
+                        @include button-hover-animation($button-one-color);
                     }
-                }  
-            }
-            .signin {
-                @include action-button($button-one-color);
-                margin-right: 15px;
-            }
-            .signup {
-                @include action-button($action-button-color);
+                    .signup {
+                        @include action-button($action-button-color);
+                        position: relative;
+                        @include button-hover-animation($action-button-color);
+                    }
+                }
             }
         }
-        .firstscreen {
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            .text {
-                margin-top: 14%;
-                h1 {
-                    font-size: 44px;
-                    font-weight: 900;
-                    color: $other-font-color;
-                    margin: 10px 0 5px 0;
-                    .other-color {
-                        color: $secondary-font-color;
-                    }  
-                }
-                p {
-                    margin: 15px 20px 25px 0
-                }
-                button {
-                    @include action-button($action-button-color) {
+        .firstScreen {
+            .firstScreen-wrap {
+                @include grid;
+                display: flex;
+                flex-direction: row;
+                margin-top: 25px;
+                margin-bottom: 60px;
+                padding: 0 5%;
+                .text {
+                    margin-top: 12%;
+                    font-family: $font-primary;
+                    h1 {
+                        font-size: 50px;
+                        font-weight: 900;
+                        color: $other-font-color;
+                        margin: 10px 0 5px 0;
+                        .other-color {color: $secondary-font-color;}  
+                    }
+                    p {
+                        margin: 15px 20px 30px 0;
+                        font-size: 18px;
+                    }
+                    button {
+                        position: relative;
+                        @include action-button($action-button-color) {
                         height: 36px;
                         width: 120px;
+                        @include button-hover-animation($action-button-color);
                     }
-                 }
+                }
             }
             img {
-                height: 493px;
-                width: 568px;
-                margin: 30px -0 30px -70px;
+                height: 556px;
+                width: 656px;
+                margin: 20px -40px 30px 0;
             }
         }
-        #howitworks {
-            .heading {
-                width: 380px;
-                height: 80px;
-                margin: 0 33%;
-                background-color: $bg-color;
-                border-radius: 10px;
-                h1 {
-                    padding: 20px 0;
-                    text-align: center;
-                    font-size: 40px;
-                    color: $other-font-color;
-                    font-weight: 900;
-                    margin: 0;
-                }
-                .animation-1, .animation-2 {
-                    display: none;
-                    background-color: $bg-color; 
-                    border-radius: 5px;
-                    position: relative; 
-                }
-                .animation-1 {
-                    height: 40px;
-                    width: 40px;
-                    left: -18%;
-                    top: -140%;
-                }
-                .animation-2 {
-                    height: 30px;
-                    width: 30px;
-                    top: -90%;
-                    left: 110%; 
-                }
-            }
-            .heading-text {
-                margin: 40px 0 10px 0;
-                font-size: 20px;
-            }
-            .switches {
-                display: flex;
-                flex-direction: row;
+        }
+    }        
+    #howitworks {
+        @include grid;
+        padding: 0 5%;
+        .heading {
+             width: 380px;
+             height: 80px;
+             margin: auto;
+             background-color: $bg-color;
+             border-radius: 10px;
+             h1 {
+                font-family: $font-primary;
+                padding: 20px 0;
+                text-align: center;
+                font-size: 40px;
                 color: $other-font-color;
-                #button-click1, #button-click2 {
-                    font-size: 30px;
-                    font-weight: 400;
-                    color: $other-font-color;
-                    margin: 20px 60px 10px 0;
-                    text-decoration: none;
-                    position: relative;
-                   @include link-animation;
+                font-weight: 900;
+                margin: 0;
+        }
+        .animation-1, .animation-2 {
+            display: none;
+            background-color: $bg-color; 
+            border-radius: 5px;
+            position: relative; 
+        }
+                    .animation-1 {
+                        height: 40px;
+                        width: 40px;
+                        left: -18%;
+                        top: -140%;
+                    }
+                    .animation-2 {
+                        height: 30px;
+                        width: 30px;
+                        top: -90%;
+                        left: 110%; 
+                    }
                 }
-            }
-            #textSlide1 {
-                margin: 30px 0;
-                display: grid;
-                grid-template-columns: 40% 50px 40%;
-                grid-template-rows: auto;
-                grid-template-areas:
-                "paragraph1 number1 ."
-                ". number2 paragraph2"
-                "paragraph3 number3 .";
-                grid-column-gap: 30px;
-                justify-content: center;
-                align-items: center;
-                .paragraph1, .paragraph2, .paragraph3 {
-                    font-family: $font-primary;
-                    font-weight: 500;
+                .heading-text {
+                    margin: 40px 0 10px 0;
+                    font-size: 20px;
+                }
+                .switches {
+                    display: flex;
+                    flex-direction: row;
                     color: $other-font-color;
-                    p {
-                        font-family: $font-secondary;
-                        color: $primary-font-color;
+                    #button-click1, #button-click2 {
+                        font-size: 30px;
                         font-weight: 400;
+                        color: $other-font-color;
+                        margin: 20px 60px 10px 0;
+                        text-decoration: none;
+                        position: relative;
+                       @include link-animation;
                     }
                 }
-                .paragraph1 {grid-area: paragraph1;}
-                .paragraph2 {grid-area: paragraph2;}
-                .paragraph3 {grid-area: paragraph3;}
-                .number1, .number2, .number3 {
-                    @include vendor-prefix(background,$gradient);
-                    height: 50px; 
-                    width: 50px;
-                    border-radius: 10px;
-                    text-align: center;
-                    font-size: 30px;
-                    font-weight: 900;
-                    p {
+                #textSlide1 {
+                    margin: 70px 0;
+                    display: grid;
+                    grid-template-columns: 40% 50px 40%;
+                    grid-template-rows: auto;
+                    grid-template-areas:
+                    "paragraph1 number1 ."
+                    ". number2 paragraph2"
+                    "paragraph3 number3 .";
+                    grid-column-gap: 30px;
+                    grid-row-gap: 70px;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .paragraph1, .paragraph2, .paragraph3 {
                         font-family: $font-primary;
-                        color: white;
-                        margin: 5px 0;
+                        font-weight: 500;
+                        color: $other-font-color;
+                        h3 {
+                            margin: 0;
+                            font-size: 20px;
+                        }
+                        p {
+                            font-family: $font-secondary;
+                            color: $primary-font-color;
+                            font-weight: 400;
+                        }
                     }
-                }
-                .number1 {grid-area: number1;}
+                    .paragraph1 {
+                        grid-area: paragraph1;
+                        text-align: right;
+                    }
+                    .paragraph2 {grid-area: paragraph2;}
+                    .paragraph3 {
+                        grid-area: paragraph3;
+                        text-align: right;
+                    }
+                    .number1, .number2, .number3 {
+                        background: $gradient;
+                        align-self: flex-start;
+                        height: 50px; 
+                        width: 50px;
+                        border-radius: 10px;
+                        text-align: center;
+                        font-size: 30px;
+                        font-weight: 900;
+                        p {
+                            font-family: $font-primary;
+                            color: white;
+                            margin: 5px 0;
+                        }
+                    }
+                    .number1 {grid-area: number1;}
                 .number2 {grid-area: number2;}
                 .number3 {grid-area: number3;}
             }
             #textSlide2 {
-                display: none;
+                 display: none;
             }   
-        }
-        
-    }
+        }           
+    
     .action {
         background-color: rgba(209,220,224,.5);
         text-align: center;
@@ -201,6 +229,8 @@ body {
                 height: 36px;
                 width: 120px;
             }
+            position: relative;
+            @include button-hover-animation($action-button-color);
         }
     }
     footer {
@@ -235,5 +265,5 @@ body {
                 color: $bg-color;
             }
         }
-    }
+}
 }

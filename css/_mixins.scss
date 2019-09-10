@@ -1,16 +1,13 @@
-@mixin vendor-prefix($name, $argument) {
-    -webkit-#{$name}: $argument;
-    -ms-#{$name}: $argument;
-    -moz-#{$name}: $argument;
-    -o-#{$name}: $argument;
-    #{$name}: $argument;
+@mixin grid {
+    max-width: 1440px;
+    margin: auto;
 }
 
 @mixin logo ($font, $coloring) {
     font-family: $font;
     font-weight: 900;
     font-size: 25px;
-    @include vendor-prefix(background,$coloring);
+    background: $gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -43,6 +40,45 @@
     &:hover:before {
         transform: scaleX(1);
     }
+}
+
+@mixin button-hover-animation ($coloring) {
+    &:hover {
+        background-color: #F6FCFF;
+        color: $coloring;
+    }
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        border-top: 2px solid $coloring;
+        border-bottom: 2px solid $coloring;
+        transition: 0.3s;
+        transform: scaleX(0);
+    }
+    &:hover:before {
+        transform: scale(1);
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        border-left: 2px solid $coloring;
+        border-right: 2px solid $coloring;
+        transition: 0.3s;
+        transform: scaleY(0);
+    }
+    &:hover:before, &:hover:after {
+        transform: scale(1);
+        border-radius: 5px;
+    } 
+    @content;
 }
 
 
