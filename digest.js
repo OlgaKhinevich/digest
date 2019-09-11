@@ -9,6 +9,20 @@ jQuery(function(f){
     });
 });
 
+$(document).ready(function() {
+    $('.paragraph1-2, .paragraph2-2, .paragraph3-2, .employer').css('display','none');
+    $('.paragraph1-1, .paragraph2-1, .paragraph3-1, .freelancer').css('display','block');
+});
+
+$('#button-click2').on('click', function(){
+    $('.paragraph1-1, .paragraph2-1, .paragraph3-1, .freelancer').css('display','none');
+    $('.paragraph1-2, .paragraph2-2, .paragraph3-2, .employer').css('display','block');
+})
+
+$('#button-click1').on('click', function(){
+    $('.paragraph1-2, .paragraph2-2, .paragraph3-2, .employer').css('display','none');
+    $('.paragraph1-1, .paragraph2-1, .paragraph3-1, .freelancer').css('display','block');
+})
 
 
 
