@@ -81,5 +81,73 @@
     @content;
 }
 
+@mixin media {
+    @media screen and (max-width: 1280px) {
+        header {
+            .firstScreen{
+                .firstScreen-wrap {
+                    .text {
+                        h1 {
+                            font-size: 43px;
+                        }
+                    }
+                    img {
+                        height: 458px;
+                        width: 540px; 
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1073px) {
+        header {
+            .firstScreen{
+                .firstScreen-wrap {
+                    .text {
+                        h1 {
+                            font-size: 40px;
+                        }
+                    }
+                    img {
+                        height: 433px;
+                        width: 511px; 
+                        margin-left: -20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 980px) {
+        header {
+            .firstScreen {
+                .firstScreen-wrap {
+                    .text {
+                        h1 {font-size: 38px;}
+                        p {font-size: 18px;}
+                    }
+                    img {
+                        height: 437px;
+                        width: 515px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+        #howitworks {
+            .heading {
+                width: 338px;
+                height: 71px;
+                h1 {
+                    font-size: 38px;
+                    padding: 16px 0;
+                }
+            }
+        }
+    }
+}
+
 
 

@@ -225,7 +225,7 @@ body header .firstScreen .firstScreen-wrap {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 25px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   padding: 0 5%;
 }
 
@@ -248,6 +248,7 @@ body header .firstScreen .firstScreen-wrap .text h1 .other-color {
 body header .firstScreen .firstScreen-wrap .text p {
   margin: 15px 20px 30px 0;
   font-size: 18px;
+  line-height: 1.3em;
 }
 
 body header .firstScreen .firstScreen-wrap .text button {
@@ -406,7 +407,7 @@ body #howitworks .switches #button-click1:hover:before, body #howitworks .switch
           transform: scaleX(1);
 }
 
-body #howitworks #textSlide1 {
+body #howitworks #textSlide {
   margin: 70px 0;
   display: -ms-grid;
   display: grid;
@@ -425,44 +426,61 @@ body #howitworks #textSlide1 {
           align-items: flex-start;
 }
 
-body #howitworks #textSlide1 .paragraph1, body #howitworks #textSlide1 .paragraph2, body #howitworks #textSlide1 .paragraph3 {
+body #howitworks #textSlide .paragraph1, body #howitworks #textSlide .paragraph2, body #howitworks #textSlide .paragraph3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #235859;
 }
 
-body #howitworks #textSlide1 .paragraph1 h3, body #howitworks #textSlide1 .paragraph2 h3, body #howitworks #textSlide1 .paragraph3 h3 {
+body #howitworks #textSlide .paragraph1 h3, body #howitworks #textSlide .paragraph2 h3, body #howitworks #textSlide .paragraph3 h3 {
+  position: relative;
   margin: 0;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-body #howitworks #textSlide1 .paragraph1 p, body #howitworks #textSlide1 .paragraph2 p, body #howitworks #textSlide1 .paragraph3 p {
+body #howitworks #textSlide .paragraph1 h3::before, body #howitworks #textSlide .paragraph2 h3::before, body #howitworks #textSlide .paragraph3 h3::before {
+  bottom: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #01B2AB;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+body #howitworks #textSlide .paragraph1 p, body #howitworks #textSlide .paragraph2 p, body #howitworks #textSlide .paragraph3 p {
   font-family: "Raleway", sans-serif;
   color: #364241;
   font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2em;
 }
 
-body #howitworks #textSlide1 .paragraph1 {
+body #howitworks #textSlide .paragraph1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: paragraph1;
   text-align: right;
 }
 
-body #howitworks #textSlide1 .paragraph2 {
+body #howitworks #textSlide .paragraph2 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: paragraph2;
 }
 
-body #howitworks #textSlide1 .paragraph3 {
+body #howitworks #textSlide .paragraph3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: paragraph3;
   text-align: right;
 }
 
-body #howitworks #textSlide1 .number1, body #howitworks #textSlide1 .number2, body #howitworks #textSlide1 .number3 {
+body #howitworks #textSlide .number1, body #howitworks #textSlide .number2, body #howitworks #textSlide .number3 {
   background: -webkit-gradient(linear, left top, left bottom, from(#55d6d8), to(#36dbba));
   background: linear-gradient(180deg, #55d6d8 0%, #36dbba 100%);
   -ms-flex-item-align: start;
@@ -475,39 +493,34 @@ body #howitworks #textSlide1 .number1, body #howitworks #textSlide1 .number2, bo
   font-weight: 900;
 }
 
-body #howitworks #textSlide1 .number1 p, body #howitworks #textSlide1 .number2 p, body #howitworks #textSlide1 .number3 p {
+body #howitworks #textSlide .number1 p, body #howitworks #textSlide .number2 p, body #howitworks #textSlide .number3 p {
   font-family: "Montserrat", sans-serif;
   color: white;
-  margin: 5px 0;
+  margin: 7px 0;
 }
 
-body #howitworks #textSlide1 .number1 {
+body #howitworks #textSlide .number1 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: number1;
 }
 
-body #howitworks #textSlide1 .number2 {
+body #howitworks #textSlide .number2 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: number2;
 }
 
-body #howitworks #textSlide1 .number3 {
+body #howitworks #textSlide .number3 {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: number3;
-}
-
-body #howitworks #textSlide2 {
-  display: none;
 }
 
 body .action {
   background-color: rgba(209, 220, 224, 0.5);
   text-align: center;
   width: 100%;
-  display: inline-block;
 }
 
 body .action h2 {
@@ -586,6 +599,10 @@ body .action button:hover:before, body .action button:hover:after {
   border-radius: 5px;
 }
 
+body .action button:hover {
+  background-color: rgba(209, 220, 224, 0.5);
+}
+
 body footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,6 +639,26 @@ body footer ul li a {
   text-decoration: none;
   color: #D1DCE0;
   font-weight: 700;
+  position: relative;
+}
+
+body footer ul li a::before {
+  bottom: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #01B2AB;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+body footer ul li a:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 body footer .copy h1 {
@@ -638,5 +675,48 @@ body footer .copy h1 {
 body footer .copy p {
   font-size: 10px;
   color: #D1DCE0;
+}
+
+@media screen and (max-width: 1280px) {
+  body header .firstScreen .firstScreen-wrap .text h1 {
+    font-size: 43px;
+  }
+  body header .firstScreen .firstScreen-wrap img {
+    height: 458px;
+    width: 540px;
+  }
+}
+
+@media screen and (max-width: 1073px) {
+  body header .firstScreen .firstScreen-wrap .text h1 {
+    font-size: 40px;
+  }
+  body header .firstScreen .firstScreen-wrap img {
+    height: 433px;
+    width: 511px;
+    margin-left: -20px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body header .firstScreen .firstScreen-wrap .text h1 {
+    font-size: 38px;
+  }
+  body header .firstScreen .firstScreen-wrap .text p {
+    font-size: 18px;
+  }
+  body header .firstScreen .firstScreen-wrap img {
+    height: 437px;
+    width: 515px;
+    margin-left: -30px;
+  }
+  body #howitworks .heading {
+    width: 338px;
+    height: 71px;
+  }
+  body #howitworks .heading h1 {
+    font-size: 38px;
+    padding: 16px 0;
+  }
 }
 /*# sourceMappingURL=digest.css.map */

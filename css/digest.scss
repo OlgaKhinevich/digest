@@ -60,7 +60,7 @@ body {
                 display: flex;
                 flex-direction: row;
                 margin-top: 25px;
-                margin-bottom: 60px;
+                margin-bottom: 50px;
                 padding: 0 5%;
                 .text {
                     margin-top: 12%;
@@ -75,6 +75,7 @@ body {
                     p {
                         margin: 15px 20px 30px 0;
                         font-size: 18px;
+                        line-height: 1.3em;
                     }
                     button {
                         position: relative;
@@ -148,7 +149,7 @@ body {
                        @include link-animation;
                     }
                 }
-                #textSlide1 {
+                #textSlide {
                     margin: 70px 0;
                     display: grid;
                     grid-template-columns: 40% 50px 40%;
@@ -166,13 +167,27 @@ body {
                         font-weight: 500;
                         color: $other-font-color;
                         h3 {
+                            position: relative;
                             margin: 0;
-                            font-size: 20px;
+                            font-size: 25px;
+                            &::before {
+                                bottom: 0;
+                                left: 0;
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 3px;
+                                background-color: $secondary-font-color;
+                                transition: 0.2s;
+                                transform: scaleX(0);
+                            }
                         }
                         p {
                             font-family: $font-secondary;
                             color: $primary-font-color;
                             font-weight: 400;
+                            font-size: 18px;
+                            line-height: 1.2em;
                         }
                     }
                     .paragraph1 {
@@ -196,23 +211,19 @@ body {
                         p {
                             font-family: $font-primary;
                             color: white;
-                            margin: 5px 0;
+                            margin: 7px 0;
                         }
                     }
                     .number1 {grid-area: number1;}
                 .number2 {grid-area: number2;}
                 .number3 {grid-area: number3;}
-            }
-            #textSlide2 {
-                 display: none;
-            }   
+            } 
         }           
     
     .action {
         background-color: rgba(209,220,224,.5);
         text-align: center;
         width: 100%;
-        display: inline-block;
         h2 {
             font-size: 45px;
             color: $other-font-color;
@@ -230,7 +241,12 @@ body {
                 width: 120px;
             }
             position: relative;
-            @include button-hover-animation($action-button-color);
+            @include button-hover-animation($action-button-color) {
+                &:hover {
+                    background-color: rgba(209,220,224,.5);
+                }
+              
+            }
         }
     }
     footer {
@@ -252,6 +268,8 @@ body {
                     text-decoration: none;
                     color: $bg-color;
                     font-weight: 700;
+                    position: relative;
+                    @include link-animation;
                 }
             }
         }
@@ -266,4 +284,5 @@ body {
             }
         }
 }
+@include media;
 }
